@@ -1,3 +1,5 @@
+import { generateFilePdf } from './generator-pdf.js'
+
 document.addEventListener("DOMContentLoaded", function () {
     console.log("[CODE.JS] Início do script");
 
@@ -21,10 +23,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
             console.log("IMPRIMINDO JSON =", dataJsonCenario);
 
+            generateFilePdf(dataCenario)
+
         } catch (error) {
             console.error("Erro ao carregar JSON:", error);
         }
     });
+
+    
 
     console.log("[CODE.JS] Fim do script");
 });
